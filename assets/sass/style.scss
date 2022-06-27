@@ -195,6 +195,63 @@ header {
             width: 8rem;
 
         }
+
+
+
+        &-button-prev,
+        &-button-next {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+            background: rgba(0, 0, 0, 0.5) !important;
+            width: 40px;
+            cursor: pointer;
+            height: 40px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            border-radius: 0;
+            span {
+                font-size: 1.6875rem;
+                color: #fff;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:hover {
+                background: #000 !important;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &-button-next {
+            right: 15px !important;
+            left: auto !important;
+        }
+
+
+        &:hover {
+            .swiper-button-prev {
+                left: 0px;
+                opacity: 1;
+            }
+
+            .swiper-button-next {
+                right: 0px;
+                opacity: 1;
+            }
+        }
+
     }
 
 }
