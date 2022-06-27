@@ -2,11 +2,11 @@ var swiper = new Swiper(".header_swiper", {
     spaceBetween: 30,
     effect: "fade",
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: "header .swiper-button-next",
+        prevEl: "header .swiper-button-prev",
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: "header .swiper-pagination",
         clickable: true,
     },
 });
@@ -110,3 +110,40 @@ function mobileMenu() {
 openBtn.addEventListener("click", mobileMenu)
 overlay.addEventListener("click", mobileMenu)
 
+
+
+/////////////////////////////////////
+// Testimonial
+
+var testimonial_swiper = new Swiper(".testimonial__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    pagination: {
+        el: ".testimonial__swiper .swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        990: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        1400: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+    },
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    grabCursor: true,
+});

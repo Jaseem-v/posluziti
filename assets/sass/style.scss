@@ -286,6 +286,14 @@ header {
         height: 100%;
         width: 100%;
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 1rem;
+        }
+
+
+
+
+
     }
 
     &__img {
@@ -329,12 +337,14 @@ header {
 }
 
 
-.clients {
-    background: #FFF6F6;
-}
+
 
 //////////////////////////////////////
-/// carousel
+/// deals
+/// 
+.deals {
+    background: #FFF6F6;
+}
 
 
 .carousel {
@@ -515,5 +525,164 @@ header {
 
     &__nvf {
         color: #c3c3c3;
+    }
+}
+
+
+
+
+//////////////////////////////////////
+// Testimonial
+.testimonial {
+    padding: 8rem 0;
+    position: relative;
+
+    &__swiper {
+        overflow: hidden;
+        padding: 0.5rem;
+
+        @media only screen and (max-width: $bp-xsmall) {
+            padding: 2rem;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        margin: 0 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: transparent !important;
+        border: 1px solid #7d7d7d;
+        position: relative;
+        -moz-transition: 0.5s;
+        transition: 0.5s;
+        cursor: pointer;
+        opacity: 0.5;
+        transform: translateY(-2rem);
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        border: 1px solid $color-primary;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: $color-primary;
+            height: 6px;
+            width: 6px;
+            transform: translate(-50%, -50%);
+            border-radius: 5rem;
+        }
+    }
+}
+
+.review {
+    margin-top: 3rem;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    // border: 1px solidvar(--color-primary);
+    margin-bottom: 3rem;
+    box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #fff8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-self: stretch;
+    flex-direction: column;
+    flex: initial;
+    width: 100%;
+    height: auto;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .star__ratings {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            i {
+                font-size: 1.6rem;
+                fill: #b7b401;
+                color: #f4f000;
+            }
+        }
+    }
+
+    // @media only screen and (max-width: $bp-small) {
+    //     height: 37rem;
+    // }
+
+    @media only screen and (max-width: $bp-xsmall) {
+        height: auto;
+    }
+
+    // @media only screen and (max-width: $bp-340) {
+    //   // height: 40rem;
+    // }
+
+    &::before {
+        content: '\201d';
+        top: 60%;
+        left: 80%;
+        position: absolute;
+        font-size: 20rem;
+        line-height: 1;
+        font-family: sans-serif;
+        opacity: 0.2;
+        color: #6666;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        z-index: 1;
+        position: relative;
+        font-weight: 500;
+        color: #7d7d7d;
+        margin-top: 2rem;
+
+        @media only screen and (max-width: $bp-xsmall) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__user {
+        display: flex;
+        padding: 2rem 1rem 0;
+        align-items: center;
+    }
+
+    &__photo {
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+
+    &__user-box {
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__user {
+        &-description {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: -1rem;
+        }
+
+        &-name {
+            color: $color-primary;
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
     }
 }
