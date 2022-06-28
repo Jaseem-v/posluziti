@@ -147,3 +147,13 @@ var testimonial_swiper = new Swiper(".testimonial__swiper", {
     loop: true,
     grabCursor: true,
 });
+
+
+// //////////////////
+//GALLERY
+$('.single-gallery-item .popup-btn').magnificPopup({
+    type: 'image',
+    gallery: {
+        enabled: true
+    }
+})

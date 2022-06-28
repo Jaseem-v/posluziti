@@ -173,6 +173,8 @@ html {
   align-items: center;
   width: 100%;
 
+
+
   &--about {
     text-align: left;
     align-items: flex-start;
@@ -206,7 +208,7 @@ html {
       align-items: flex-end;
       padding-left: 0rem;
       padding-right: 11rem;
-      
+
 
       &::before {
         left: auto;
@@ -313,8 +315,19 @@ html {
     font-size: var(--responsive-font);
   }
 
-  &--about{
+
+
+  &--about {
     width: 100%;
+  }
+
+  &--footer {
+    color: #fff;
+    line-height: 1.954;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
 }
