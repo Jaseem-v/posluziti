@@ -120,8 +120,14 @@
   &__link {
     font-size: 1.6rem;
     font-weight: 400;
-    color: #727272;
+    color: #2E2E2E;
     position: relative;
+
+    &:hover {
+      @media only screen and (max-width: $bp-992) {
+        color: $color-primary;
+      }
+    }
 
     &::after {
       bottom: -1rem;
@@ -134,6 +140,10 @@
       opacity: 0.6;
       transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
       width: 0;
+
+      @media only screen and (max-width: $bp-992) {
+        display: none;
+      }
     }
 
     &:hover::after {
@@ -144,6 +154,10 @@
 
     &.active {
       font-weight: 500;
+
+      @media only screen and (max-width: $bp-992) {
+        color: $color-primary;
+      }
 
       &::after {
         width: 100%;
